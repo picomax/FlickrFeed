@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FlickrFeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Oi-f5-0IT">
+                                <rect key="frame" x="0.0" y="30" width="375" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QoV-ED-KsV">
+                                        <rect key="frame" x="20" y="0.0" width="34" height="30"/>
+                                        <state key="normal" title="Start"/>
+                                        <connections>
+                                            <action selector="startButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UKp-ke-ETp"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="te4-Qx-kET">
+                                        <rect key="frame" x="325" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="09d-Fb-0Nh"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Y8g-bm-A8T">
+                                        <rect key="frame" x="183" y="0.0" width="124" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="xBh-kN-yRp"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="timeSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="xU1-RK-gxa"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Y8g-bm-A8T" firstAttribute="top" secondItem="1Oi-f5-0IT" secondAttribute="top" id="C7E-4q-aus"/>
+                                    <constraint firstItem="te4-Qx-kET" firstAttribute="leading" secondItem="Y8g-bm-A8T" secondAttribute="trailing" constant="20" id="Fep-sT-AEI"/>
+                                    <constraint firstItem="QoV-ED-KsV" firstAttribute="top" secondItem="1Oi-f5-0IT" secondAttribute="top" id="H34-xk-sgI"/>
+                                    <constraint firstAttribute="trailing" secondItem="te4-Qx-kET" secondAttribute="trailing" constant="20" id="JVg-YR-kRv"/>
+                                    <constraint firstAttribute="height" constant="30" id="M1D-1u-HNu"/>
+                                    <constraint firstItem="QoV-ED-KsV" firstAttribute="leading" secondItem="1Oi-f5-0IT" secondAttribute="leading" constant="20" id="V6l-ck-56e"/>
+                                    <constraint firstAttribute="bottom" secondItem="Y8g-bm-A8T" secondAttribute="bottom" id="aq7-Hv-oeW"/>
+                                    <constraint firstAttribute="bottom" secondItem="te4-Qx-kET" secondAttribute="bottom" id="nfv-gx-EOU"/>
+                                    <constraint firstItem="te4-Qx-kET" firstAttribute="top" secondItem="1Oi-f5-0IT" secondAttribute="top" id="ww3-cV-0OF"/>
+                                    <constraint firstAttribute="bottom" secondItem="QoV-ED-KsV" secondAttribute="bottom" id="yPt-Wg-3wN"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Emt-t2-TNt">
+                                <rect key="frame" x="0.0" y="70" width="375" height="587"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Emt-t2-TNt" secondAttribute="bottom" constant="10" id="D15-Du-gnY"/>
+                            <constraint firstItem="Emt-t2-TNt" firstAttribute="top" secondItem="1Oi-f5-0IT" secondAttribute="bottom" constant="10" id="EkS-jP-ehn"/>
+                            <constraint firstItem="1Oi-f5-0IT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="Lih-YX-cfn"/>
+                            <constraint firstAttribute="trailing" secondItem="Emt-t2-TNt" secondAttribute="trailing" id="M3W-yu-Vin"/>
+                            <constraint firstItem="Emt-t2-TNt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SVp-PA-3gn"/>
+                            <constraint firstAttribute="trailing" secondItem="1Oi-f5-0IT" secondAttribute="trailing" id="V83-6H-RKK"/>
+                            <constraint firstItem="1Oi-f5-0IT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="X2m-Fl-Ckf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Emt-t2-TNt" id="cwc-Au-XOy"/>
+                        <outlet property="startButton" destination="QoV-ED-KsV" id="zqv-8w-oJD"/>
+                        <outlet property="timeTextField" destination="te4-Qx-kET" id="hUh-OU-lYS"/>
+                        <outlet property="timeslider" destination="Y8g-bm-A8T" id="eal-Am-NfJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+        </scene>
+    </scenes>
+</document>

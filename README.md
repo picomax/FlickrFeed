@@ -18,7 +18,7 @@ Flickr의 공개피드 이미지를 하나씩 보여줍니다.
   
 
 ## 스크린샷
-
+[]https://raw.githubusercontent.com/picomax/FlickrFeed/master/Screenshot.png
 
 ## 현재 상태
 
